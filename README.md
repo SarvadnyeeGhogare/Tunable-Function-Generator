@@ -1,3 +1,4 @@
+
 Tunable Function Generator
 
 This project involves the design and implementation of a Tunable Function Generator capable of generating sine, square, and triangular waveforms. The key feature of this function generator is tunability — both the magnitude and frequency of the waveforms can be controlled using potentiometers.
@@ -13,25 +14,11 @@ A square wave is a non-sinusoidal waveform that switches abruptly between high a
 TRIANGULAR WAVE:
 A triangular wave is a periodic, non-sinusoidal waveform characterized by its triangular shape. It's a piecewise linear, continuous real function where the rise and fall times are equal
 
-2.Tunability:
-Frequency and amplitude of each waveform can be varied using potentiometers.
-The formulas for frequency is prooved in attached images for sine , square and triangular wave.
-
-3.Components:
+2.Components:
 DSO,Power Supply,Breadboard,Connecting Wires,Opamps,Diodes,Resistors,Capacitors,Potentiometer.
 
-HOW WAVEFORMS ARE GENERATED?
-
-The flow is sine wave---->square wave---->triangular wave.
-
-1.SINE WAVE:
-Based on a Wien Bridge Oscillator circuit.
-
-2.SQUARE WAVE:
-Based on non-inverting Schmitt Trigger circuit.
-
-3.TRIANGULAR WAVE:
-Based on integrator circuit.
+3.Tunability:
+Amplitude of each waveform can be varied using potentiometers.
 
 HOW IS FREQUENCY AND AMPLITUDE CONTROLLED?
 
@@ -39,7 +26,38 @@ HOW IS FREQUENCY AND AMPLITUDE CONTROLLED?
 
 2.Non-inverting circuit gain controls amplitude of waveforms.
 
-PRACTICAL RESULTS:
+Waveform Generator Frequency Control Modes:
+
+1. Common Frequency Mode
+
+All waveform outputs (Sine, Square, Triangle) are derived from a single oscillator.
+
+Same frequency across all waveforms.
+
+No individual control.
+
+Minimal hardware required (simplest design).
+
+2. Partially Controlled Frequency Mode
+
+Sine wave has independent frequency control.
+
+Square and Triangle share a common frequency.
+
+Moderate hardware requirement due to partial decoupling.
+
+3. Fully Independent Frequency Mode
+
+Sine, Square, and Triangle generators all have separate, independently controlled frequencies.
+
+Maximum control over signal behavior.
+
+High hardware requirement due to complete separation of control paths.
+
+I implemented the second (Partially Controlled ) configuration, as it offers the best balance from the perspective of hardware control and frequency flexibility.
+The formulas for frequency is prooved in attached images for sine , square and triangular wave.
+
+PRACTICAL RESULTS:(Partially Controlled mode)
 
 SINE:
 
@@ -49,9 +67,19 @@ Amplitude-0.5V to 12V
 SQUARE:
 
 Frequency: 400Hz to 12KHz
-Amplitude: 2V to 11V
+Amplitude: 1V to 11V
 
 TRIANGLE:
 
-Frequency: 400Hz to 11KHZ
-Amplitude: 1V to 11V
+Frequency: 400Hz to 12KHZ
+Amplitude: 1V to 12V
+
+
+
+
+
+
+
+
+
+
