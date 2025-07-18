@@ -50,7 +50,9 @@ Maximum control over signal behavior.
 High hardware requirement due to complete separation of control paths but complex.
 
 Here we implemented the second (Partially Controlled ) configuration, as it offers the best balance from the perspective of hardware control and frequency flexibility.
-The formulas for frequency is prooved in attached images for sine , square and triangular wave.
+So we can change frequency by having control on R with help of potentiometer.
+
+The formulas for frequency is proved in attached images for sine and square, triangular wave.
 
 PRACTICAL RESULTS:(Partially Controlled mode)
 
